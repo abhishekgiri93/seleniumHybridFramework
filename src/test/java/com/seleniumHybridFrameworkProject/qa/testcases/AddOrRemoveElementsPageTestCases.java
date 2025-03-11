@@ -30,7 +30,7 @@ public class AddOrRemoveElementsPageTestCases extends Base {
         driver.quit();
     }
 
-    @Test(description = 'Verify add & remove button feature', priority = 1)
+    @Test(description = "Verify add & remove button feature'", priority = 1)
     public void verifyAddElementButton(){
         addOrRemoveElementsPage.clickAddElementButton();
         Assert.assertTrue(addOrRemoveElementsPage.dele);
