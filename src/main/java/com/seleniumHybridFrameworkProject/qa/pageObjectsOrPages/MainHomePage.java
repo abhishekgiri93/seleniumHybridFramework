@@ -38,6 +38,9 @@ public class MainHomePage {
     @FindBy(xpath = "//a[text() = 'Add/Remove Elements']")
     private WebElement addOrRemoveElementsPageButton;
 
+    @FindBy(xpath = "//a[@href = \"/checkboxes\" and text() = \"Checkboxes\"]")
+    private WebElement checkboxesLink;
+
 
 
     // Methods Section ------------------------------------------------------------------------------------------
@@ -75,6 +78,11 @@ public class MainHomePage {
     public AddOrRemoveElementsPage navigateToAddOrRemoveElementsPage(){
         addOrRemoveElementsPageButton.click();
         return new AddOrRemoveElementsPage(driver, utilities);
+    }
+
+    public CheckboxesPage navigateToCheckboxesPage(){
+        checkboxesLink.click();
+        return new CheckboxesPage(driver, utilities);
     }
 
 

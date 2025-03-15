@@ -31,13 +31,16 @@ public class MainHomePageTestCases extends Base {
     public void verifyPageTitle() {
         mainHomePage.setExpectedTitle(utilities.getProperty("expectedTitle"));
         Assert.assertEquals(mainHomePage.getActualTitle(), mainHomePage.getExpectedTitle(), "Title is not as Expected Title");
+//        System.out.println(mainHomePage.getActualTitle());
     }
 
-//    @Test(description = "should run with Url1 in Config",priority = 2)
-//    public void verifySuccessfulLoginWithValidCredentials() {
-//        mainHomePage.clickBasicAuthButtonOnMainPage();
-//        Assert.assertEquals(mainHomePage.getTextInsideBasicAuth(), utilities.getProperty("expectedSuccessLoginMsg"));
-//    }
+    @Test(description = "should run with Url1 in Config",priority = 2)
+    public void verifySuccessfulLoginWithValidCredentials() {
+        driver.get(prop.getProperty("Url1"));
+        mainHomePage.clickBasicAuthButtonOnMainPage();
+        Assert.assertEquals(mainHomePage.getTextInsideBasicAuth(), utilities.getProperty("expectedSuccessLoginMsg"));
+//        System.out.println(mainHomePage.getTextInsideBasicAuth());
+    }
 
     @Test
     public void verifyBrokenImages() {

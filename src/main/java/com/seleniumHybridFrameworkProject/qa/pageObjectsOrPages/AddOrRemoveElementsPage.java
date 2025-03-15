@@ -6,11 +6,14 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.List;
+
 public class AddOrRemoveElementsPage {
 
     WebDriver driver;
     Utilities utilities;
-    public AddOrRemoveElementsPage(WebDriver driver, Utilities utilities){
+
+    public AddOrRemoveElementsPage(WebDriver driver, Utilities utilities) {
         this.driver = driver;
         this.utilities = utilities;
         PageFactory.initElements(driver, this);
@@ -26,17 +29,24 @@ public class AddOrRemoveElementsPage {
     @FindBy(xpath = "//*[@class = 'added-manually']")
     private WebElement deleteButtons;
 
+    @FindBy(xpath = "//*[@class = 'added-manually']")
+    private List<WebElement> allDeleteButtons;
+
 
     //-----------------------------------------------------------------------------------------------------------
 
     // Access Methods for WebElements
 
-    public void clickAddElementButton(){
+    public void clickAddElementButton() {
         addElementButton.click();
     }
 
-    public void clickDeleteButtons(){
+    public void clickDeleteButtons() {
         deleteButtons.click();
+    }
+
+    public int countOfAddedButtons(){
+        return allDeleteButtons.size();
     }
 
 
