@@ -13,7 +13,6 @@ public class MainHomePage {
 
     WebDriver driver;
     private String expectedTitle;
-
     Utilities utilities;
 
     public MainHomePage(WebDriver driver, Utilities utilities) {
@@ -84,7 +83,6 @@ public class MainHomePage {
         checkboxesLink.click();
         return new CheckboxesPage(driver, utilities);
     }
-
 
 
 }
