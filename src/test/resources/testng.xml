@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name = "seleniumHybridFramework Automation Suite">
+<suite name="seleniumHybridFramework Automation Suite">
     <listeners>
-        <listener class-name="com.seleniumHybridFrameworkProject.qa.listeners.MyListeners" />
+        <listener class-name="com.seleniumHybridFrameworkProject.qa.listeners.MyListeners"/>
     </listeners>
-    <test name = "seleniumHybridFramework Test Cases">
+    <test name="seleniumHybridFramework Test Cases">
         <classes>
-            <class name="com.seleniumHybridFrameworkProject.qa.testcases.Login" />
+            <class name="com.seleniumHybridFrameworkProject.qa.testcases.MainHomePageTestCases" />
+            <class name="com.seleniumHybridFrameworkProject.qa.testcases.AddOrRemoveElementsPageTestCase" />
+            <class name="com.seleniumHybridFrameworkProject.qa.testcases.CheckboxesPageTC" />
         </classes>
     </test>
 </suite>
